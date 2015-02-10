@@ -10,7 +10,7 @@ RUN mkdir -p /tmp/minidlna
 RUN wget -O /tmp/minidlna/minidlna.tar.gz http://sourceforge.net/projects/minidlna/files/minidlna/${MINIDLNA_VERSION}/minidlna-${MINIDLNA_VERSION}.tar.gz
 RUN cd /tmp/minidlna && tar --strip-components 1 -xvf minidlna.tar.gz && ./configure && make && make install
 RUN mkdir -p /etc/minidlna
-RUN cp /tmp/minidlna/minidlna.conf /
+RUN cp /tmp/minidlna/minidlna.conf /etc/minidlna/minidlna.conf
 
 VOLUME /etc/minidlna
 VOLUME /minidlna-data
