@@ -13,7 +13,7 @@ RUN mkdir -p /etc/minidlna
 RUN cp /tmp/minidlna/minidlna.conf /etc/minidlna/minidlna.conf
 
 VOLUME /etc/minidlna
-VOLUME /minidlna-data
+VOLUME /opt
 
 EXPOSE 1900/udp
 EXPOSE 8200
